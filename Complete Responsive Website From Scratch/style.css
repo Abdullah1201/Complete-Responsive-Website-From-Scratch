@@ -1,0 +1,280 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif;
+}
+.container{
+  position: relative;
+  padding: 0 100px;
+  min-height: 100vh;
+}
+.container::before{
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100%;
+  background: #333;
+  z-index: -2;
+}
+.container::after{
+  position: absolute;
+  content: 'Healthy';
+  bottom: 0;
+  left: 0;
+  /* width: 350px;
+  height: 100%; */
+  font-size: 18vw;
+  font-weight: 700;
+  /* background: #333; */
+  color: #000;
+  z-index: -2;
+  opacity: 0.04;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+.logo{
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333;
+  font-size: 30px;
+}
+.logo span{
+  color: #77ff00;
+}
+header ul{
+  display: flex;
+}
+header ul li{
+  margin: 0 20px;
+}
+header ul li a{
+  position: relative;
+  font-size: 18px;
+  padding: 4px 10px;
+  color: #333;
+}
+header ul li:nth-child(3) a,
+header ul li:nth-child(4) a{
+  color: #fff;
+}
+header ul li a::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #77ff00;
+  z-index: -1;
+  transition: .5s ease-in-out;
+}
+header ul li a:hover::before,
+header ul li a.active:before{
+  width: 40px;
+}
+.content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    margin-top: 10px;
+}
+.banerText{
+  max-width: 450px;
+  /* margin-right: 40px; */
+}
+.banerText div{
+  display: none;
+}
+.banerText div.active{
+  display: initial;
+}
+.banerText h2{
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 1.2em;
+  color: #333;
+}
+.banerText p{
+  font-size: 18px;
+  color: #333;
+  line-height: 1.5em;
+  margin: 20px 0;
+}
+.banerText a{
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #333;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 10px;
+  /* margin-top: 10px; */
+}
+.banerText a:hover::before{
+  width: 100%;
+}
+.banerText a::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  background: #77ff00;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+.banerImg{
+  position: relative;
+  width: 430px;
+  height: 330px;
+  background: #000;
+}
+.banerImg img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+}
+.banerImg img.active{
+  opacity: 1;
+}
+.SocialIcons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.icons,
+.controls{
+  position: relative;
+  display: flex;
+}
+.icons li{
+  margin-right: 30px;
+}
+.icons li img{
+  display: inline-block;
+  max-height: 24px;
+  transition: 0.5s ease-in-out;
+}
+.icons li:hover img{
+  transform: translate(-10px);
+}
+.controls li{
+  margin-left: 20px;
+  cursor: pointer;
+  filter: invert(1);
+
+}
+.controls li:hover{
+  opacity: 0.5;
+}
+.controls li img{
+  display: inline-block;
+  max-width: 30px;
+}
+.menuIcon{
+  display: none;
+}
+@media(max-width:992px){
+  .container{
+    padding: 20px 50px;
+  }
+  .container::before{
+    display: none;
+  }
+  header{
+    padding: 0;
+  }
+.controls li{
+  filter: invert(0);
+}
+.banerText h2{
+  font-size: 30px;
+}
+.content{
+  flex-direction: column-reverse;
+}
+.banerImg{
+  width: 100%;
+  height: 60vh;
+  margin: 20px 0;
+}
+.banerText{
+  max-width: 100%;
+  padding-right: 0;
+}
+header ul{
+  display: none;
+  /* display: initial; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  z-index: 10000;
+  padding: 100px 0;
+}
+header ul li{
+  text-align: center;
+  padding: 20px;
+}
+header.active ul{
+  display: initial;
+}
+
+header ul li a{
+  font-size: 36px;
+  color: #333 !important;
+}
+
+header ul li a:hover::before,
+header ul li a.active:before{
+  width: 100%;
+}
+.menuIcon{
+  display: initial;
+  position: fixed;
+  right: 50px;
+  background: #fff url(img/menu.png);
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 100000;
+  background-repeat: no-repeat;
+  background-position: 6px;
+}
+header.active .menuIcon{
+  background: #fff url(img/close.png);
+  background-repeat: no-repeat;
+  background-position: 6px;
+
+}
+}
+
+@media(max-width:767px){
+  .container{
+    padding: 20px 30px;
+  }
+  .menuIcon{
+    right: 30px;
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+      <header id="navbar">
+            <a href="#" class="logo">Good <span>Foods</span></a>
+            <ul>
+                <li><a href="#"class="active">Home</a></li>
+                <li><a href="#" >Menu</a></li>
+                <li><a href="#" >About</a></li>
+                <li><a href="#" >Contact</a></li>
+                <!-- <li><a href="#" ></a></li> -->
+            </ul>
+            <span class="menuIcon" onclick="menu()"></span>
+        </header>
+        <div class="content">
+            <div class="banerText" id="slideShowText">
+                <div class="active">
+                    <h2>Eat Healthy <br>Stay Healthy</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, quo dolor amet harum atque veritatis excepturi expedita fuga minus perspiciatis.</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div>
+                    <h2>Eat Your <br>Vegetable</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, quo dolor amet harum atque veritatis excepturi .</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div>
+                    <h2>Goof Fodd <br>Good Mood</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, quo dolor amet harum .</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div class="banerImg" id="slideShow">
+                <img src="img/img (3).jpg" class="active" alt="">
+                <img src="img/img (2).jpg" alt="">
+                <img src="img/img (1).jpg" alt="">
+            </div>
+
+        </div>
+        <div class="SocialIcons">
+            <ul class="icons">
+                <li><a href="#"><img src="img/facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="img/twitter.png" alt=""></a></li>
+                <li><a href="#"><img src="img/instagram.png" alt=""></a></li>
+            </ul>
+            <ul class="controls">
+
+                <li><a href="#"><img src="img/left-arrow.png" alt="" onclick="previousSlide();previousSlideText();"></a></li>
+                <li><a href="#"><img src="img/arrow-right.png" alt="" onclick="nextSlide();nextSlideText();"></a></li>
+            </ul>
+        </div>
+    </div>
+ 
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
